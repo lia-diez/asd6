@@ -8,7 +8,7 @@ namespace asd5
         public bool[] State;
         public double Value;
         private ChanceNode _parent;
-        private bool PossibleOneDice => State[6] && State[7] && State[8];
+        public bool PossibleOneDice => State[6] && State[7] && State[8];
 
         public Node()
         {
@@ -29,7 +29,7 @@ namespace asd5
             double value = 0;
             for (int i = 0; i < State.Length; i++)
             {
-                if (State[i]) value += i + 1;
+                if (!State[i]) value += i + 1;
             }
 
             Value = value;
@@ -55,7 +55,7 @@ namespace asd5
                 double probability = 0.167;
                 for (int i = 1; i < 7; i++)
                 {
-                    Children.Add(new ChanceNode(probability, this, i));
+                    Children.Add(new ChanceNode(probability, this, i, true));
                 }
             }
 
@@ -63,7 +63,7 @@ namespace asd5
                 {0.028, 0.056, 0.083, 0.111, 0.139, 0.167, 0.194, 0.167, 0.139, 0.111, 0.083, 0.056, 0.028};
             for (int i = 2; i < 13; i++)
             {
-                Children.Add(new ChanceNode(chances[i-2], this, i));
+                Children.Add(new ChanceNode(chances[i-2], this, i, false));
             }
         }
 

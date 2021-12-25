@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asd6", "asd6\asd6.csproj", "{A50B1331-B80D-45EB-A1B1-FB40050F54CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cram", "Cram\Cram.csproj", "{286D5804-6A1C-4E87-BC01-FD5E02DAF79C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloseSectorGame", "CloseSectorGame\CloseSectorGame.csproj", "{286D5804-6A1C-4E87-BC01-FD5E02DAF79C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

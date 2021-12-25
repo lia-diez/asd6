@@ -8,13 +8,15 @@ namespace asd5
         private double _chance;
         public double Chance => _chance;
         public readonly List<Node> Children;
-        private readonly int _diceValue;
+        public readonly int DiceValue;
+        public readonly bool OneDice;
 
-        public ChanceNode(double chance, Node parent, int diceValue)
+        public ChanceNode(double chance, Node parent, int diceValue, bool oneDice)
         {
             _chance = chance;
             _parent = parent;
-            _diceValue = diceValue;
+            DiceValue = diceValue;
+            OneDice = oneDice;
             Children = new List<Node>();
         }
 
@@ -26,7 +28,7 @@ namespace asd5
                 for (int j = i + 1; j < _parent.State.Length; j++)
                 {
                     if (i == j) continue;
-                    if (!_parent.State[i] && !_parent.State[j] && i + j + 2 == _diceValue)
+                    if (!_parent.State[i] && !_parent.State[j] && i + j + 2 == DiceValue)
                     {
                         Node.Copy<bool>(_parent.State, out bool[] newState);
                         newState[i] = true;

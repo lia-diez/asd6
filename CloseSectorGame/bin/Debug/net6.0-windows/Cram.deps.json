@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Cram/1.0.0": {
+        "dependencies": {
+          "asd6": "1.0.0"
+        },
+        "runtime": {
+          "Cram.dll": {}
+        }
+      },
+      "asd6/1.0.0": {
+        "runtime": {
+          "asd6.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cram/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "asd6/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

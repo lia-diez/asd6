@@ -6,12 +6,12 @@ namespace asd5
     {
         public static void Main()
         {
-            Vitaliy vitaliy = new Vitaliy(3);
-            Node current = new Node();
-            while (vitaliy.MakeStep(ref current))
-            {
-                Console.WriteLine(current);
-            }
+            Opponent opponent = new Opponent(4);
+                Node current = new Node();
+                while (opponent.MakeStep(ref current, 6, 6))
+                {
+                    Console.WriteLine(current);
+                }
         }
     }
 }
